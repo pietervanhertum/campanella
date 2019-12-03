@@ -29,7 +29,7 @@
 
 <?php
 $SOUNDFILE_UPLOAD_DIR = "/var/www/uploads/";
-$ACTIVE_SOUNDFILE_PATH = "/opt/campanella/data/suono.wav";
+$ACTIVE_SOUNDFILE_PATH = "/opt/campanella/data/suono.mp3";
 $OPTIONS_FILE_PATH = "/opt/campanella/OPTIONS.txt";
 $RESTART_CAMPANELLA_SCRIPT_PATH = "/opt/campanella/restart_script.sh";
 ?>

@@ -58,15 +58,15 @@ if ($handle = opendir($SOUNDFILE_UPLOAD_DIR)) {
 }
 
 if (isset($_POST['selected_sound'])) {
-		if (substr($_POST['selected_sound'], -4) == ".wav") {
-			echo "<pre>Impostato suono</pre>";
+		if (substr($_POST['selected_sound'], -4) == ".mp3") {
+			echo "<pre>MP3 laden suono</pre>";
+		}
+		else {
+			echo "<pre>Best Mp3 gebruiken!.</pre>";
+		}
 		$data_file = $SOUNDFILE_UPLOAD_DIR . $_POST['selected_sound'];
 		unlink($ACTIVE_SOUNDFILE_PATH);
 		copy($data_file, $ACTIVE_SOUNDFILE_PATH);
-		}
-		else {
-			echo "<pre>File non valido</pre>";
-		}
 }
 ?>
 

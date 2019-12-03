@@ -35,7 +35,7 @@ import os
 import RPi.GPIO as GPIO
 
 #pin numbers are defined using GPIO.BOARD numeration
-GPIO_CAMPANELLA_PIN = 7
+GPIO_CAMPANELLA_PIN = 22
 GPIO_LED_RED_PIN = 13
 GPIO_LED_GREEN_PIN = 16
 GPIO_LED_BLUE_PIN = 18
@@ -48,6 +48,9 @@ def campanella_suona(sound_type) : #ring bell
 	temp_volume = str(volume) + "dB"
 	os.system("amixer -q -- sset PCM playback " + temp_volume)
 	os.system("aplay -q -D sysdefault /opt/campanella/data/suono.wav")
+	#TODO add timeout and change to mp3 player
+	#TODO install mp3 player
+	#TODO Change php settings for filesize mp3
 	time.sleep(track_duration)
 	set_led_color("green")
 	GPIO.output(GPIO_CAMPANELLA_PIN, False)

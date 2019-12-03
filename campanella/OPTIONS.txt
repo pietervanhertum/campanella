@@ -3,7 +3,7 @@
 #enable
 1
 #track duratin in seconds
-1
+10
 #volume
 4
 #ntp server
