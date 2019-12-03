@@ -47,11 +47,13 @@ def campanella_suona(sound_type) : #ring bell
 	GPIO.output(GPIO_CAMPANELLA_PIN, True) #enable the output pin
 	temp_volume = str(volume) + "dB"
 	os.system("amixer -q -- sset PCM playback " + temp_volume)
-	os.system("aplay -q -D sysdefault /opt/campanella/data/suono.wav")
+	os.system("timeout " +track_duration+ " play -q -D sysdefault /opt/campanella/data/suono.mp3")
 	#TODO add timeout and change to mp3 player
 	#TODO install mp3 player
 	#TODO Change php settings for filesize mp3
-	time.sleep(track_duration)
+	# sudo apt-get install libsox-fmt-all
+
+	#time.sleep(track_duration)
 	set_led_color("green")
 	GPIO.output(GPIO_CAMPANELLA_PIN, False)
 def get_ntp_time() :
