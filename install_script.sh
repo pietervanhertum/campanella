@@ -195,6 +195,7 @@ echo "Installing required software..."
 default_color;
 sudo apt-get update
 sudo apt-get -y install python-pip python-dev
+sudo apt-get install libsox-fmt-all
 sudo pip install distribute
 sudo pip install RPi.GPIO
 sudo pip install RPLCD
