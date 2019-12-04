@@ -63,9 +63,9 @@ if (isset($_POST['enable']) && isset($_POST['orari']) && isset($_POST['ntp_updat
 	. $lines .
 	"\n#enable\n"
 	. $_POST['enable'] .
-	"\n#track duratin in seconds\n"
+	"\n#track duration in seconds\n"
 	. $_POST['playtime'] .
-	"#volume\n" . 
+	"\n#volume\n" .
 	$_POST['volume'] .
 	"\n#ntp server\n"
 	. $_POST['ntp_server'] .
@@ -150,8 +150,8 @@ textarea {
 					<h5><input type="text" name="ntp_server" value="<?php echo $options[4]; ?>"></h5>
 					<h4 class="settingsVolume"></h4>
 					<h5><input type="text" name="volume" value="<?php echo $options[3]; ?>"></h5>
-					<h4> Play Time (in seconds)</h4>
-					<h5><input type="text" name="playtime" value="<?php echo $options[4]; ?>"></h5>
+					<h4> Afspeeltijd (in seconden)</h4>
+					<h5><input type="text" name="playtime" value="<?php echo $options[2]; ?>"></h5>
 
 					<h4><input type="checkbox" name="squilla_ora" value="squilla_ora"/> <span class="settingsRingNow"></span></h4>
 					<h4><input type="checkbox" name="NTP_ora" value="NTP_ora"/> <span class="settingsNTPnow"></span></h4>

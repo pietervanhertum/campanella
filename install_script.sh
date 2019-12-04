@@ -196,6 +196,7 @@ default_color;
 sudo apt-get update
 sudo apt-get -y install python-pip python-dev
 sudo apt-get install libsox-fmt-all
+sudo apt-get install sox
 sudo pip install distribute
 sudo pip install RPi.GPIO
 sudo pip install RPLCD
